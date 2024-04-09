@@ -1,0 +1,126 @@
+body {
+    background: #000000 url(../../assets/img/TTshopredLong.jpg) no-repeat top center / cover;
+
+}
+
+.container {
+    padding: 0 15px;
+}
+
+
+
+
+.section {
+    background-color: rgba(0, 0, 0, 0.744);
+    width: 743px;
+    padding: 60px 50px 80px;
+}
+
+.main .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000, 0 0 100px #ff0000, 0 0 150px #ff0000;}
+.main-text {
+    margin: 50px 0 50px;
+}
+
+.main-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+h1, h2 {
+    font-family: "Rye", serif;
+    color: rgb(254, 159, 159);
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.text {
+    font-family: "Rye", serif;
+    text-align: center;
+    line-height: 1.2em; 
+    font-size: 1em;
+    color:rgb(254, 159, 159);
+    font-size: 25px;
+}
+
+
+
+.image-link img {
+    width: 200px;
+    height: 200px;
+    transition: all 0.8s;
+}
+
+.image-link:hover img {
+    content: url(../../../fred-tatto.png);
+    box-shadow: 0px 1px 2px 0px rgba(255, 255, 255, 0.7),
+            1px 2px 4px 0px rgba(255, 0, 0, 0.7),
+            2px 4px 8px 0px rgba(255, 0, 0, 0.7),
+            2px 4px 16px 0px rgba(255, 0, 0, 0.7);
+    transition: all 0.8s;
+    
+
+}
+
+.button {
+    display: inline-block;
+    background-color: #000000;
+    border-radius: 10px;
+    border: 2px solid  rgb(255, 50, 50);
+    color:  rgb(255, 50, 50);
+    padding: 5px 20px;
+    margin: 10px auto 0;
+}
+
+.button:hover {
+    background-color: rgb(0, 0, 0);
+    color: #ff0000;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    margin: 0;
+}
+
+/* FORMULARIO */
+
+form {
+    width: 300px;
+    padding: 20px;
+    color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+

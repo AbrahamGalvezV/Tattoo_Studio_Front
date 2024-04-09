@@ -1,0 +1,16 @@
+.character-card {
+    display: flex;
+    flex-direction: wrap;
+    height: 10em;
+    width: 8em;
+    margin-top: 1em;
+    background-color: beige;
+    
+}
+
+.character-card:hover {
+    transition-duration: 1s;
+    transform:scale(1.25);
+    box-shadow:inset 50px 50px 50px 50px goldenrod;
+
+}

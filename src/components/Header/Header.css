@@ -1,0 +1,21 @@
+.header.navbar {
+    background-color: rgb(0, 0, 0);
+
+}
+
+.header.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link, .navbar-brand {
+    font-family: "Rye", serif;
+    color: rgb(254, 159, 159);
+}
+
+.logo-name {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000, 0 0 100px #ff0000, 0 0 150px #ff0000;
+}
+
