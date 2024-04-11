@@ -1,8 +1,8 @@
 import axios from "axios";
 
 // const API_RM_URL = "https://rickandmortyapi.com/api";
-const API_URL = "http://localhost:3000/api";
-// const API_URL = "aquí hay una url para un entorno de desarrollo"
+// const API_URL = "http://localhost:3000/api";
+const API_URL = "https://tattoo-studio-backend.vercel.app";
 
 export const registerNewUserCall = async (credentials) => {
   return await axios.post(`${API_URL}/auth/register`, credentials);
