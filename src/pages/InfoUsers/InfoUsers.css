@@ -1,0 +1,19 @@
+.info {
+  background-color: rgba(0, 0, 0, 0.744);
+}
+
+.info__btn {
+  margin: 0 0 30px;
+}
+
+.info__btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.disabledButtom {
+  background-color: transparent;
+  color: red;
+  border: 1px solid #ff0000;
+}

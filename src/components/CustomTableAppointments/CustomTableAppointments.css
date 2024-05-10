@@ -1,0 +1,35 @@
+.buttonClass {
+    margin: 5px;
+    font-size: 15px;
+}
+
+.table__wrapper {
+    
+    
+    margin: auto;
+    font-size: 15px;
+}
+
+td {
+    vertical-align: middle
+}
+
+.disabledButton {
+    background-color: transparent;
+    color: red;
+    border: 1px solid #ff0000
+}
+
+.table__btns {
+    margin: 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    
+}
+
+
+.table__text {
+    color: white;
+    margin-bottom: 0;
+}

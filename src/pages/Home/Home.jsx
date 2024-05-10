@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { CustomInput } from "../../components/CustomInput/CustomInput";
-import Header from "../../components/Header/Header";
+import './Home.css'
 import fredCara from "../../assets/img/fredCara.png";
 
 export const Home = () => {
@@ -13,7 +10,7 @@ export const Home = () => {
           <div className="container">
                 <h1 className="main-title title">Bienvenido  a Neón Tattoo Shop</h1>
                 <p className="main-text text">Tu estudio de confianza donde se encuentran los artistas del tatuaje más prestigiosos del momento. En esta página podrás conocer a nuestros tatuadores y ver algunos de sus trabajos más recientes.</p>   
-                <div className="main-img">
+                <div className="img">
                 <a className="image-link" href="./fred.html">
                     <img src={fredCara} alt="Imagen de Fred"/>
                 </a>

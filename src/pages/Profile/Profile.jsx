@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
-import "../UserHome/UserHome.css";
+import './Profile.css'
 import { CustomInput } from "../../components/CustomInput/CustomInput";
 import { bringProfile } from "../../services/apiCalls";
+import { inputValidator } from "../../utils/validators";
 import BootstrapModal from "../../components/BootstrapModal/BootrstrapModal";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserData, logout } from "../../app/slices/userSlice";
 
 //----------------------------------------------------------------
 
@@ -17,8 +20,31 @@ export const Profile = () => {
 
   const [errorMessage, setErrorMessage] = useState("");
 
-  const myPassport = JSON.parse(sessionStorage.getItem("passport"));
+  // const myPassport = JSON.parse(sessionStorage.getItem("passport"));
+
+  const myPassport = useSelector(getUserData);
   const token = myPassport.token;
+
+  const [isValidContent, setIsvalidContent] = useState({
+    firstName: true,
+    lastName: true,
+    email: true,
+    role: {
+      name: true,
+    },
+  });
+
+  const inputValidatorHandler = (e) => {
+    const isValid = inputValidator(e.target.value, e.target.name);
+    setIsvalidContent((prevState) => ({
+      ...prevState,
+      [e.target.name]: isValid,
+    }));
+    console.log(
+      "is " + e.target.value + " this a valid " + e.target.name + "?",
+      isValid
+    );
+  };
 
   const inputHandler = (e) => {
     setProfileData((prevState) => ({
@@ -35,31 +61,12 @@ export const Profile = () => {
     fetchProfile();
   }, []);
 
-  useEffect(() => {
-    console.log(profileData, "bringProfile");
-  }, [profileData]);
-
-  const updateProfileHandler = () => {
-    if (
-      !inputValidator(profileData.firstName, "firstName") ||
-      !inputValidator(profileData.email, "email")
-    ) {
-      console.log("nombre o email no válidos");
-      setErrorMessage("No se pueden actualizar los datos");
-      return;
-    }
-    try {
-      updateProfile(profileData, token);
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   return (
     <>
-      <div className="main section">
+      <div className="profile section">
         <div className="container">
-          <h2 className="userHome-hola">Mi profile</h2>
+          <h2 className="title">Mi profile</h2>
           <CustomInput
             typeProp="text"
             nameProp="firstName"
@@ -67,6 +74,7 @@ export const Profile = () => {
             value={profileData.firstName}
             isDisabled={!isEditing}
             handlerProp={inputHandler}
+            isValidContent={isValidContent.firstName}
           />
           <CustomInput
             typeProp="text"
@@ -75,6 +83,8 @@ export const Profile = () => {
             value={profileData.lastName}
             isDisabled={!isEditing}
             handlerProp={inputHandler}
+            isValidContent={isValidContent.lastName}
+            onBlurHandler={(e) => inputValidatorHandler(e)}
           />
           <CustomInput
             typeProp="text"
@@ -83,6 +93,7 @@ export const Profile = () => {
             value={profileData.email}
             isDisabled={!isEditing}
             handlerProp={inputHandler}
+            isValidContent={isValidContent.email}
           />
           <CustomInput
             typeProp="text"
@@ -91,23 +102,16 @@ export const Profile = () => {
             value={profileData.role.name}
             isDisabled={true}
             handlerProp={inputHandler}
+            isValidContent={isValidContent.role.name}
           />
 
-          {isEditing ? (
-            <div className="button-container">
-              <button onClick={() => updateProfileHandler(true)}>Save</button>
-              <button onClick={() => setIsEditing(false)}>Cancel</button>
-            </div>
-          ) : (
-            <>
-              
-              <BootstrapModal
-                profileData={profileData}
-                inputHandler={inputHandler}
-                token={token}
-              />
-            </>
-          )}
+          <>
+            <BootstrapModal
+              profileData={profileData}
+              inputHandler={inputHandler}
+              token={token}
+            />
+          </>
         </div>
       </div>
     </>
