@@ -17,7 +17,7 @@ export const Services = () => {
               <img src={fredCara} alt="Imagen de Fred" />
               <p className="artist-name text">Fred</p>
             </a>
-            <a className="image-link" href="./juan.html">
+            <a className="image-link" href="/fred">
               <img src={fredCara} alt="Imagen de Juan" />
               <p className="artist-name text">Juan</p>
             </a>
@@ -28,7 +28,7 @@ export const Services = () => {
           </div>
           <p className="text services-text-names">PIRSERS</p>
           <div className="img">
-            <a className="image-link" href="./maria.html">
+            <a className="image-link" href="/fred">
               <img src={fredCara} alt="Imagen de María" />
             </a>
             <p className="services-desc">
@@ -39,7 +39,7 @@ export const Services = () => {
           </div>
           <p className="text services-text-names"> DELETE TATTOO</p>
           <div className="img">
-            <a className="image-link" href="./maria.html">
+            <a className="image-link" href="/fred">
               <img src={fredCara} alt="Imagen de María" />
             </a>
             <p className="services-desc">

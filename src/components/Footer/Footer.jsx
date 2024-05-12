@@ -25,7 +25,7 @@ export const Footer = () => {
   };
 
   const client = {
-    email: "Juston83@gmail.com",
+    email: "user@gmail.com",
     password: "12345678",
   };
 
