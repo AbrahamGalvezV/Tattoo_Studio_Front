@@ -2,16 +2,16 @@
     margin: 1em;
     border-radius: 1em;
     box-shadow: 0px 1px 2px 0px rgba(255, 255, 255, 0.7),
-    1px 2px 4px 0px rgba(255, 0, 0, 0.7),
-    2px 4px 8px 0px rgba(255, 0, 0, 0.7),
-    2px 4px 16px 0px rgba(255, 0, 0, 0.7);
+    1px 2px 4px 0px #fcb100,
+    2px 4px 8px 0px #fcb100,
+    2px 4px 16px 0px #fcb100;
     width: 20em;
     background-color: transparent;
     padding: 5px 20px;
 }
 
 .input-design::placeholder {
-    color: rgb(174, 107, 107);
+    color: rgb(136, 120, 76);
 }
 .custom-input-container {
     color: rgb(229, 226, 226);

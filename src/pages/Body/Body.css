@@ -1,5 +1,5 @@
 body {
-  background: #000000 url(../../assets/img/TTshopredLong.jpg) no-repeat top
+  background: #000000 url(../../assets/img/) no-repeat top
     center / cover;
   min-height: 100vh;
 }
@@ -24,14 +24,14 @@ body {
 .title {
   color: #ffffff;
   text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff,
-    0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000, 0 0 100px #ff0000,
-    0 0 150px #ff0000;
+    0 0 40px #ffc400, 0 0 80px #ffc400, 0 0 90px #ffc400, 0 0 100px #ffc400,
+    0 0 150px #ffc400;
 }
 
 h1,
 h2 {
   font-family: "Rye", serif;
-  color: rgb(254, 159, 159);
+  color: #ffc400;
   font-size: 50px;
   text-align: center;
   margin-bottom: 60px;
@@ -42,7 +42,7 @@ h2 {
   text-align: center;
   line-height: 1.2em;
   font-size: 1em;
-  color: rgb(254, 159, 159);
+  color: #ffc400;
   font-size: 25px;
 }
 
@@ -64,16 +64,16 @@ h2 {
 .image-link:hover img {
   content: url(../../assets/img/fred-tatto.png);
   box-shadow: 0px 1px 2px 0px rgba(255, 255, 255, 0.7),
-    1px 2px 4px 0px rgba(255, 0, 0, 0.7), 2px 4px 8px 0px rgba(255, 0, 0, 0.7),
-    2px 4px 16px 0px rgba(255, 0, 0, 0.7);
+  0 0 40px #ffc400, 0 0 80px #ffc400, 0 0 90px #ffc400, 0 0 100px #ffc400,
+  0 0 150px #ffc400;
   transition: all 0.8s;
 }
 
 .userHome-hola {
   color: #ffffff;
   text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff,
-    0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000, 0 0 100px #ff0000,
-    0 0 150px #ff0000;
+  0 0 40px #ffc400, 0 0 80px #ffc400, 0 0 90px #ffc400, 0 0 100px #ffc400,
+  0 0 150px #ffc400;
   margin-bottom: 40px;
   font-size: 50px;
 }
@@ -83,7 +83,7 @@ h2 {
 }
 
 .buttonClass {
-  background-color: red;
+  background-color: #ffc400;
   color: rgb(31, 31, 31);
   border-radius: 30px;
   transition: 0.3s;
@@ -116,8 +116,9 @@ h2 {
   background-color: transparent;
   transition: 0.3s;
   box-shadow: 0px 1px 2px 0px rgba(255, 255, 255, 0.7),
-    1px 2px 4px 0px rgba(255, 0, 0, 0.7), 2px 4px 8px 0px rgba(248, 1, 1, 0.7),
-    2px 4px 16px 0px rgba(255, 0, 0, 0.7);
-  color: rgb(255, 0, 0);
+  1px 2px 4px 0px #fcb100,
+  2px 4px 8px 0px #fcb100,
+  2px 4px 16px 0px #fcb100;
+  color: #fcb100;
   border-color: transparent;
 }

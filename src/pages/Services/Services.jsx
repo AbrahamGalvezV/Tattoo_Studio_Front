@@ -9,9 +9,9 @@ export const Services = () => {
         <div className="container">
           <h2 className="title">SERVICES</h2>
           <p className="text services__text">
-            At neon tattoo you have the best professionals in the sector.
+          <p className="text services-text-names">SKATE</p>
+            Aprende skate desde cero o mejora tus habilidades
           </p>
-          <p className="text services-text-names">TATTOERS</p>
           <div className="img">
             <a className="image-link" href="/fred">
               <img src={fredCara} alt="Imagen de Fred" />
@@ -21,7 +21,7 @@ export const Services = () => {
               <img src={fredCara} alt="Imagen de Juan" />
               <p className="artist-name text">Juan</p>
             </a>
-            <p className="services-desc">
+            <p className="text services__text">
               Our tattoo artists with more than 20 years of experience in the
               art sector will be able to translate your ideas onto your skin.
             </p>
@@ -31,7 +31,7 @@ export const Services = () => {
             <a className="image-link" href="/fred">
               <img src={fredCara} alt="Imagen de María" />
             </a>
-            <p className="services-desc">
+            <p className="text services__text">
               Our piercing expert will be able to perform any piercing or
               dilation in the most hygienic way possible, always with the best
               tools.
@@ -42,7 +42,7 @@ export const Services = () => {
             <a className="image-link" href="/fred">
               <img src={fredCara} alt="Imagen de María" />
             </a>
-            <p className="services-desc">
+            <p className="text services__text">
               We have the latest tattoo removal technology today, our expert
               will ensure that no trace of your old tattoo remains.
             </p>

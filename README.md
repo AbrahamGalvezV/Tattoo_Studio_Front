@@ -17,13 +17,12 @@
 
 ## Objetivo 🎯
 
-Vincular una API a la parte frontal de una web usando los conocimientos adquiridos en clase. (lo demas si esoooo... a tomar porculo) para dotar a la pagina de una base de datos que permita al usuario registrase y establecer una cita  
-
+Vincular una API a la parte frontal usando los conocimientos adquiridos en clase, para así dotar a la página de una base de datos que permita al usuario registrase y crear citas
 
 
 ## Sobre el proyecto 🔎   
 
-Esta aplicación está creada para agilizar el registro y gestión de citas de los usuarios de un estudio de tatuajes. Para ello he vinculado el proyecto con una base de datos que creé anterior mente y que podrá usar aquí https://github.com/AbrahamGalvezV/Tattoo_Studio_Backend . Para realizar esta parte frontal he usado las siguientes tecnologías.
+Esta aplicación está creada para facilitar el registro y gestión de citas de los usuarios de un estudio de tatuajes. Aquí podrás encontrar el back creado para dar soporte a este front https://github.com/AbrahamGalvezV/Tattoo_Studio_Backend 
 
 ## Stack 🛠️
 <div align="center">

@@ -52,7 +52,7 @@ function Header() {
       <Navbar data-bs-theme="dark" className="header">
         <Container>
           <Navbar.Brand href="home" className="logo-name">
-            NEON TATTOO
+            PURO SKATE
           </Navbar.Brand>
           <Nav>
             <Nav.Link

@@ -18,6 +18,7 @@ import { AppointmentInfoArtist } from "../AppointmentInfo/AppointmentInfoArtist"
 import { AppointProfile } from "../AppointProfile/AppointProfile";
 import { AppointmentInfoClient } from "../AppointmentInfo/AppointmentInfoClient";
 import { AppointmentRegistre } from "../AppointmentRegistre/AppointmentRegistre";
+import { AppointmentRegistreClient } from "../AppointmentRegistre/AppointmentRegistreClient";
 
 export const Body = () => {
   return (
@@ -49,6 +50,7 @@ export const Body = () => {
         <Route path="/client" element={<AuthRoute component={ClientHome} />} />
         <Route path="/appointment" element={<AuthRoute component={AppointProfile} />} />
         <Route path="/appointments-info-client" element={<AuthRoute component={AppointmentInfoClient} />} />
+        <Route path="/create-appointment-user" element={<AuthRoute component={AppointmentRegistreClient} />} />
         
 
       </Routes>

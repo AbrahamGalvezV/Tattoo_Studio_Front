@@ -173,6 +173,20 @@ export const registerNewAppointment = async (credentials, token) => {
 };
 
 
+
+// Ver lista de todos los usuarios
+export const bringAllServices = async (token, current_page, per_page) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+
+  const res = await axios.get(`${API_URL}/services?page=${current_page}&limit=${per_page}`, config);
+  return res;
+};
+
+
 // .get("url", {headers})
 // .post("url", {body}, {headers})
 // .put("url", {body}, {headers})

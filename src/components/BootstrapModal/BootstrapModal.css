@@ -1,7 +1,7 @@
 .modal-content {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.744);
-    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 40px #ff0000;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 40px #fcb100;;
 }
 
 .modal-header .modal-title {
@@ -13,3 +13,4 @@
     margin: 0;
     color: white;
 }
+
