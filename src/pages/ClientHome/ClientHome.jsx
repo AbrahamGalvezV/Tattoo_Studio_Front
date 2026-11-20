@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { CustomInput } from "../../components/CustomInput/CustomInput";
 import { bringProfile } from "../../services/apiCalls";
 import "./ClientHome.css";
 import { getUserData } from "../../app/slices/userSlice";
@@ -14,11 +13,11 @@ export const ClientHome = () => {
   const myPassport = useSelector(getUserData);
   const token = myPassport.token
 
+  const userName = myPassport.decodificado.userName;
+
   useEffect(() => {
-    const userName = myPassport.decodificado
-      .userName;
     setMsg(`¡Hola, ${userName}!`);
-  }, []);
+  }, [userName]);
 
   const bringProfileHandler = async () => {
     try {

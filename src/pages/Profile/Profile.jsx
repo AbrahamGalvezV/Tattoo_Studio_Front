@@ -4,8 +4,8 @@ import { CustomInput } from "../../components/CustomInput/CustomInput";
 import { bringProfile } from "../../services/apiCalls";
 import { inputValidator } from "../../utils/validators";
 import BootstrapModal from "../../components/BootstrapModal/BootrstrapModal";
-import { useDispatch, useSelector } from "react-redux";
-import { getUserData, logout } from "../../app/slices/userSlice";
+import { useSelector } from "react-redux";
+import { getUserData } from "../../app/slices/userSlice";
 
 //----------------------------------------------------------------
 
@@ -16,9 +16,8 @@ export const Profile = () => {
     email: "",
     role: "",
   });
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing] = useState(false);
 
-  const [errorMessage, setErrorMessage] = useState("");
 
   // const myPassport = JSON.parse(sessionStorage.getItem("passport"));
 
@@ -59,7 +58,7 @@ export const Profile = () => {
       setProfileData(myProfileData);
     };
     fetchProfile();
-  }, []);
+  }, [token]);
 
 
   return (

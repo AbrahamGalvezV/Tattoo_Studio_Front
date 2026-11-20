@@ -1,16 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CustomInput } from "../../components/CustomInput/CustomInput";
 import { ButtonC } from "../../components/ButtonC/ButtonC";
-import { decodeToken } from "react-jwt";
 import {
   registerNewAppointment,
-  registerNewUserCall,
 } from "../../services/apiCalls";
 import "./AppointmentRegistre.css";
 import { inputValidator } from "../../utils/validators";
-import { getUserData, login } from "../../app/slices/userSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { getUserData } from "../../app/slices/userSlice";
+import { useSelector } from "react-redux";
 
 //------------------------------------------------------------------------------
 
@@ -24,7 +22,6 @@ export const AppointmentRegistre = () => {
     artistId: "",
   });
 
-  const dispatch = useDispatch();
 
   const myPassport = useSelector(getUserData);
   const token = myPassport.token;

@@ -24,7 +24,7 @@ export const userSlice = createSlice({
         } ,
 
         // Con esta función volvemos al estado inicial de clearSlice (borramos la info del user)
-        logout: (state,action) => {
+        logout: () => {
             return {
                 token: "",
                 decodificado:{

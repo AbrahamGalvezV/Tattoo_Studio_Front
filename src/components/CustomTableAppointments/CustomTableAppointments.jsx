@@ -77,7 +77,7 @@ export function CustomTableAppointments() {
     } else {
       setFilteredAppointments([]);
     }
-  }, [filter]);
+  }, [filter, appointments]);
 
   const deleteAppointment = async (id) => {
     await deleteAppointmentById(id, token);

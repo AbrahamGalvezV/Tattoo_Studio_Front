@@ -80,7 +80,7 @@ export function CustomTableAppointmentsClient() {
     } else {
       setFilteredAppointments([]);
     }
-  }, [filter]);
+  }, [filter, appointments]);
 
   // Borrar cita
   const deleteAppointment = async (id) => {

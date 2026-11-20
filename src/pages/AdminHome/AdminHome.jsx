@@ -13,11 +13,11 @@ export const AdminHome = () => {
   const myPassport = useSelector(getUserData);
   const token = myPassport.token
 
+  const userName = myPassport.decodificado.userName;
+
   useEffect(() => {
-    const userName = myPassport.decodificado
-      .userName;
     setMsg(`¡Hola, ${userName}!`);
-  }, []);
+  }, [userName]);
 
   const bringProfileHandler = async () => {
     try {

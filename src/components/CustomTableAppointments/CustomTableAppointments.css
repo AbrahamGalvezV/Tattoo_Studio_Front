@@ -16,8 +16,8 @@ td {
 
 .disabledButton {
     background-color: transparent;
-    color: #ffc400;
-    border: 1px solid #ffc400
+    color: red;
+    border: 1px solid #ff0000
 }
 
 .table__btns {

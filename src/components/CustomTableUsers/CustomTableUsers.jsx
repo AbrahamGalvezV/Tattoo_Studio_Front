@@ -73,7 +73,7 @@ export function CustomTableUsers() {
     };
 
     fetchUsers();
-  }, [currentPage]);
+  }, [currentPage, token]);
 
   // handler del buscador de personajes
   const filterHandler = (e) => {
@@ -114,7 +114,7 @@ export function CustomTableUsers() {
       setFilteredUsers([]);
       [];
     }
-  }, [filter]);
+  }, [filter, allUsers]);
 
   const deleteUser = async (id) => {
     await deleteUserById(id, token);

@@ -1,12 +1,11 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css";
 import { getUserData, logout } from "../../app/slices/userSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 //----------------------------------------------------------------
 
@@ -51,18 +50,20 @@ function Header() {
     <>
       <Navbar data-bs-theme="dark" className="header">
         <Container>
-          <Navbar.Brand href="home" className="logo-name">
-            PURO SKATE
+          <Navbar.Brand as={Link} to="/" className="logo-name">
+            NEON TATTOO
           </Navbar.Brand>
           <Nav>
             <Nav.Link
-              href="/home"
-              className={location.pathname === "/home" ? "logo-name" : ""}
+              as={Link}
+              to="/"
+              className={location.pathname === "/" || location.pathname === "/home" ? "logo-name" : ""}
             >
               HOME
             </Nav.Link>
             <Nav.Link
-              href="/services"
+              as={Link}
+              to="/services"
               className={location.pathname === "/services" ? "logo-name" : ""}
             >
               SERVICES
@@ -70,7 +71,8 @@ function Header() {
             {!token && ( // Renderizar si el usuario no está autenticado
               <>
                 <Nav.Link
-                  href="/register"
+                  as={Link}
+                  to="/register"
                   className={
                     location.pathname === "/register" ? "logo-name" : ""
                   }
@@ -78,7 +80,8 @@ function Header() {
                   REGISTER
                 </Nav.Link>
                 <Nav.Link
-                  href="/login"
+                  as={Link}
+                  to="/login"
                   className={location.pathname === "/login" ? "logo-name" : ""}
                 >
                   LOGIN

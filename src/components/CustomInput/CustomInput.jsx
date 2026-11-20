@@ -14,8 +14,6 @@ export const CustomInput = ({
 }) => {
   // props, properties, propiedades, se reciben como un objeto
 
-  const claseJS = "clase-de-prueba";
-
   return (
     <div className="custom-input-container">
       {/*El input recibe un booleano indicando si el contenido es válido, y muestra una clase u otra*/}

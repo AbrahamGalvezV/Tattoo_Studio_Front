@@ -74,7 +74,7 @@ export function CustomTableAppointmentsArtist() {
     } else {
       setFilteredAppointments([]);
     }
-  }, [filter]);
+  }, [filter, appointments]);
 
   // Borrar cita
   const deleteAppointment = async (id) => {

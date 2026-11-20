@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import './Services.css';
 import fredCara from "../../assets/img/fredCara.png";
 
@@ -9,44 +10,43 @@ export const Services = () => {
         <div className="container">
           <h2 className="title">SERVICES</h2>
           <p className="text services__text">
-          <p className="text services-text-names">SKATE</p>
-            Aprende skate desde cero o mejora tus habilidades
+            At Neon Tattoo you will find the best professionals in the industry.
           </p>
+          <p className="text services-text-names">TATTOO ARTISTS</p>
           <div className="img">
-            <a className="image-link" href="/fred">
+            <Link className="image-link" to="/fred">
               <img src={fredCara} alt="Imagen de Fred" />
               <p className="artist-name text">Fred</p>
-            </a>
-            <a className="image-link" href="/fred">
+            </Link>
+            <Link className="image-link" to="/fred">
               <img src={fredCara} alt="Imagen de Juan" />
               <p className="artist-name text">Juan</p>
-            </a>
-            <p className="text services__text">
-              Our tattoo artists with more than 20 years of experience in the
-              art sector will be able to translate your ideas onto your skin.
-            </p>
+            </Link>
           </div>
-          <p className="text services-text-names">PIRSERS</p>
+          <p className="services-desc">
+            With more than 20 years of experience in the art world, our tattoo
+            artists will turn your ideas into a unique piece on your skin.
+          </p>
+          <p className="text services-text-names">PIERCING</p>
           <div className="img">
-            <a className="image-link" href="/fred">
+            <Link className="image-link" to="/fred">
               <img src={fredCara} alt="Imagen de María" />
-            </a>
-            <p className="text services__text">
-              Our piercing expert will be able to perform any piercing or
-              dilation in the most hygienic way possible, always with the best
-              tools.
-            </p>
+            </Link>
           </div>
-          <p className="text services-text-names"> DELETE TATTOO</p>
+          <p className="services-desc">
+            Our piercing expert performs any piercing or stretching with the
+            highest hygiene standards and professional-grade tools.
+          </p>
+          <p className="text services-text-names">TATTOO REMOVAL</p>
           <div className="img">
-            <a className="image-link" href="/fred">
+            <Link className="image-link" to="/fred">
               <img src={fredCara} alt="Imagen de María" />
-            </a>
-            <p className="text services__text">
-              We have the latest tattoo removal technology today, our expert
-              will ensure that no trace of your old tattoo remains.
-            </p>
+            </Link>
           </div>
+          <p className="services-desc">
+            Using the latest laser removal technology, our specialist will make
+            sure no trace of your old tattoo remains.
+          </p>
         </div>
       </div>
     </>

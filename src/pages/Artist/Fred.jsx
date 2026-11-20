@@ -1,5 +1,3 @@
-import fredCara from "../../assets/img/fredCara.png";
-
 export const Fred = () => {
   return (
     <>

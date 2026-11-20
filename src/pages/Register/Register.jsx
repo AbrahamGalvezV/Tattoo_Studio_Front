@@ -5,7 +5,6 @@ import { ButtonC } from "../../components/ButtonC/ButtonC";
 import { registerNewUserCall } from "../../services/apiCalls";
 import "./Register.css";
 import { inputValidator } from "../../utils/validators";
-import { useDispatch } from "react-redux";
 
 //------------------------------------------------------------------------------
 
@@ -18,7 +17,6 @@ export const Register = () => {
     password: "",
   });
 
-  const dispatch = useDispatch();
 
   const [isValidContent, setIsvalidContent] = useState({
     email: "",

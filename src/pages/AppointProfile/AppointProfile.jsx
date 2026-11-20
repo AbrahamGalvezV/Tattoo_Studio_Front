@@ -26,7 +26,7 @@ export const AppointProfile = () => {
     role: "",
   });
 
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing] = useState(false);
 
   // Extrae la información de la cita
   const myAppointment = useSelector(getAppointmentData);
@@ -53,7 +53,7 @@ export const AppointProfile = () => {
       console.log(myAppointmentData.data, "cita by id");
     };
     fetchAppointment();
-  }, []);
+  }, [appointmentId, token]);
 
   return (
     <>

@@ -11,6 +11,7 @@ import "./BootstrapModal.css";
 
 function BootstrapModal({ profileData, inputHandler, token }) {
   const [show, setShow] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
 
@@ -52,22 +53,17 @@ function BootstrapModal({ profileData, inputHandler, token }) {
 
   // Botón de guardar la información actualizada
   const handleUpdate = async () => {
+    if (
+      !inputValidator(profileData.firstName, "firstName") ||
+      !inputValidator(profileData.email, "email")
+    ) {
+      console.log("nombre o email no válidos");
+      setErrorMessage("No se pueden actualizar los datos");
+      return;
+    }
     try {
       await updateProfile(profileData, token);
-      if (
-        !inputValidator(profileData.firstName, "firstName") ||
-        !inputValidator(profileData.email, "email")
-      ) {
-        console.log("nombre o email no válidos");
-        setErrorMessage("No se pueden actualizar los datos");
-        return;
-      }
-      try {
-        updateProfile(profileData, token);
-      } catch (err) {
-        console.log(err);
-      }
-
+      setErrorMessage("");
       setShow(false); // Cierra el modal
 
       setTimeout(() => {
@@ -75,6 +71,7 @@ function BootstrapModal({ profileData, inputHandler, token }) {
       }, 1000);
     } catch (err) {
       console.log(err);
+      setErrorMessage("No se pueden actualizar los datos");
     }
   };
 
@@ -121,6 +118,7 @@ function BootstrapModal({ profileData, inputHandler, token }) {
             isValidContent={isValidContent.email}
             onBlurHandler={(e) => inputValidatorHandler(e)}
           />
+          {errorMessage && <div className="error">{errorMessage}</div>}
         </Modal.Body>
         <Modal.Footer>
           <Button  variant="secondary" onClick={handleClose}>

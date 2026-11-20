@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import CustomTableUsers from "../../components/CustomTableUsers/CustomTableUsers";
 import "./InfoUsers.css";
 import { ButtonC } from "../../components/ButtonC/ButtonC";

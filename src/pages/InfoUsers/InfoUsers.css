@@ -14,6 +14,6 @@
 
 .disabledButtom {
   background-color: transparent;
-  color: #fcb100;
-  border: 1px solid #fcb100;
+  color: red;
+  border: 1px solid #ff0000;
 }

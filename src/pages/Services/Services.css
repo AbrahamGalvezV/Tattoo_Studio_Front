@@ -4,7 +4,8 @@
 
 .services__text {
   margin: 20px auto 50px;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .services-text-names {
@@ -14,10 +15,11 @@
 .services-desc {
   font-family: "Rye", serif;
   text-align: center;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   font-size: 20px;
   color: rgb(255, 255, 255);
-  margin-bottom: 50px;
+  margin: 0 auto 50px;
 }
 
 .artist-name {
